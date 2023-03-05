@@ -1,0 +1,18 @@
+.contenedor{
+width: 100%;
+}
+.parte1, .parte2{
+display: inline-block;
+text-align: start;
+margin-bottom: 80px;
+}
+.img-proyecto{
+box-shadow: 10px 10px 30px black;
+transition: transform .5s;
+}
+.img-proyecto:hover{
+transform: scale(1.1);
+}
+.proyecto-title{
+    color:grey;
+}

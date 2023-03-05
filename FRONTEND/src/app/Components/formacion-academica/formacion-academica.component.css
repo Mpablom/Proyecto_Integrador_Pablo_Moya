@@ -1,0 +1,25 @@
+#logo-estudios{
+    width: 120px;
+    height: 60px;
+    margin-left: 0px;
+    margin-bottom: 20px;
+    background-color:whitesmoke;
+    box-shadow: 10px 10px 30px black;
+    transition: transform .5s ease-in-out;
+}
+#logo-estudios:hover{
+transform: scale(1.5);
+}
+#formacion{
+text-align: start;
+width:25%;
+padding:10px;
+}
+@media only screen and (max-width : 900px) {
+    #formacion{
+        width: 100vw;
+    }
+    .row{
+        margin-right: 0px;
+    }
+}

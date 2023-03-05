@@ -1,0 +1,80 @@
+.logos{
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    margin-right: 30px;
+}
+button{
+margin-left: 15px;
+transition: transform  .5s;
+}
+button:hover{
+transform: scale(1.2);
+}
+/*logo argentina programa*/
+.logoap{
+margin-left: 10px;
+}
+.LogoAp{
+width: 130px;
+height: 60px;
+}
+/*logos redes*/
+.sociales{
+margin-right: 0px;
+align-items: center;
+}
+.sociales img{
+width: 40px;
+height: 40px;
+}
+
+#facebook{
+transition: transform  .5s;
+}
+#facebook:hover{
+transform: scale(1.2);
+}
+#github{
+transition: transform  .5s;
+}
+#github:hover{
+transform: scale(1.2);
+}
+#twitter{
+transition: transform  .5s;
+}
+#twitter:hover{
+transform: scale(1.2);
+}
+#linkedin{
+transition: transform  .5s;
+}
+#linkedin:hover{
+transform: scale(1.2);
+}
+#instagram{
+transition: transform  .5s;
+}
+#instagram:hover{
+transform: scale(1.2);
+}
+@media only screen and (max-width : 575px) {
+    .sociales img{
+        width: 30px;
+        height: 30px;
+    }
+    .LogoAp{
+        width: 80px;
+        height: 60px;
+    }
+    .logos{
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        /* margin-right: 30px; */
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: stretch;
+    }
+}

@@ -1,0 +1,21 @@
+
+.cabecera-container{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+#cabecera{
+    width: 100% !important;
+    padding: 0;
+    height: auto;
+    margin:0;
+}
+@media screen and(max-width:576px) {
+.imagen_cabecera{
+    width: 100%;
+}
+#cabecera{
+    width: 100%;
+}
+
+}
