@@ -3,5 +3,5 @@
     transition: transform .5s;
 }
 #inicio:hover{
-transform: scale(1.5);
+    transform: scale(1.1);
 }

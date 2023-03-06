@@ -16,6 +16,10 @@ import { ProyectosComponent } from './Components/proyectos/proyectos.component';
 import { HomeComponent } from './Components/home/home.component';
 import { LoginComponent } from './Components/login/login.component';
 import { HttpClientModule } from '@angular/common/http';
+import { NgCircleProgressModule } from 'ng-circle-progress';
+import { NgxBootstrapIconsModule } from 'ngx-bootstrap-icons';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MdbCheckboxModule } from 'mdb-angular-ui-kit/checkbox';
 
 @NgModule({
   declarations: [
@@ -36,7 +40,10 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    NgCircleProgressModule.forRoot({}),
+    BrowserAnimationsModule,
+    MdbCheckboxModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

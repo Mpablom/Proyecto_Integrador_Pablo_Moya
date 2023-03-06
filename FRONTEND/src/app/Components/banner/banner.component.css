@@ -1,4 +1,3 @@
-
 .cabecera-container{
     width: 100%;
     margin: 0;
@@ -11,11 +10,11 @@
     margin:0;
 }
 @media screen and(max-width:576px) {
-.imagen_cabecera{
-    width: 100%;
-}
-#cabecera{
-    width: 100%;
-}
+    .imagen_cabecera{
+        width: 100%;
+    }
+    #cabecera{
+        width: 100%;
+    }
 
 }

@@ -28,36 +28,12 @@ align-items: center;
 width: 40px;
 height: 40px;
 }
-
-#facebook{
-transition: transform  .5s;
+.sociales-icons{
+    padding: 3px;
+    transition: transform  .5s;
 }
-#facebook:hover{
-transform: scale(1.2);
-}
-#github{
-transition: transform  .5s;
-}
-#github:hover{
-transform: scale(1.2);
-}
-#twitter{
-transition: transform  .5s;
-}
-#twitter:hover{
-transform: scale(1.2);
-}
-#linkedin{
-transition: transform  .5s;
-}
-#linkedin:hover{
-transform: scale(1.2);
-}
-#instagram{
-transition: transform  .5s;
-}
-#instagram:hover{
-transform: scale(1.2);
+.sociales-icons:hover{
+    transform: scale(1.2);
 }
 @media only screen and (max-width : 575px) {
     .sociales img{

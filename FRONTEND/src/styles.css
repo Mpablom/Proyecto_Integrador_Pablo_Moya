@@ -8,28 +8,32 @@ html{
   box-sizing:inherit;
   margin: 0;
   padding: 0;
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Lato', sans-serif;
 }
 body{
   box-sizing: border-box;
-  /* background:linear-gradient(to top, #9cf7ee,#0aead5); */
-  background: #6a11cb;
-    
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: -webkit-linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1));
-  
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  background: linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1));
-  width: 100vw;
+  background: linear-gradient(to right, rgb(125, 64, 223), rgba(37, 117, 252, 1),rgb(75, 140, 253));
+  width: 100%;
   margin: 0px;
   padding: 0px;
   overflow-x: hidden;
+  color: black;
+
+}
+app-root{
+  width: 100%;
+}
+h1{
+  font-family: 'Bree Serif', serif;
 }
 h2{
   margin-left: 20px;
+  font-family: 'Bree Serif', serif;
 }
 p {
   margin-left: 20px;
+  font-weight: 400;
+  font-style:normal;
 }
 .dropdown{
   text-align: center;

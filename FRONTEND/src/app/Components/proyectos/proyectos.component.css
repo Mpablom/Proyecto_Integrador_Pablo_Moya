@@ -14,5 +14,6 @@ transition: transform .5s;
 transform: scale(1.1);
 }
 .proyecto-title{
-    color:grey;
+    color:#2e2e2e;
+    font-family: 'Bree Serif', serif;
 }
