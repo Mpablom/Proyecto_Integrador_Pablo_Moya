@@ -1,5 +1,9 @@
+.fixed-action-btn{
+    right: 10px ;
+    bottom: 10px ;
+}
 #inicio{
-    box-shadow: 10px 10px 30px black;
+    box-shadow: 5px 5px 15px black;
     transition: transform .5s;
 }
 #inicio:hover{

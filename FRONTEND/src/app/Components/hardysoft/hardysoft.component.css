@@ -1,0 +1,7 @@
+
+.skills-items{
+    transition: all .4s  ease-in-out;
+}
+.skills-items:hover{
+    transform: scale(1.2);
+}

@@ -5,28 +5,29 @@
     margin-right: 30px;
 }
 button{
-margin-left: 15px;
-transition: transform  .5s;
+    margin-left: 15px;
+    transition: transform  .5s;
+    border-radius: 20px;
 }
 button:hover{
-transform: scale(1.2);
+    transform: scale(1.2);
 }
 /*logo argentina programa*/
 .logoap{
-margin-left: 10px;
+    margin-left: 10px;
 }
 .LogoAp{
-width: 130px;
-height: 60px;
+    width: 130px;
+    height: 60px;
 }
 /*logos redes*/
 .sociales{
-margin-right: 0px;
-align-items: center;
+    margin-right: 0px;
+    align-items: center;
 }
 .sociales img{
-width: 40px;
-height: 40px;
+    width: 40px;
+    height: 40px;
 }
 .sociales-icons{
     padding: 3px;
@@ -34,6 +35,12 @@ height: 40px;
 }
 .sociales-icons:hover{
     transform: scale(1.2);
+}
+.sociales-links{
+    display: inline-flex;
+}
+.ingresar{
+    display: inline-flex;
 }
 @media only screen and (max-width : 575px) {
     .sociales img{
@@ -52,5 +59,25 @@ height: 40px;
         flex-direction: row;
         flex-wrap: wrap;
         align-content: stretch;
+    }
+}
+@media(max-width: 320px){
+    .logoap{
+        display: none;      
+    }
+    .sociales-links{
+        left: 0;
+        position: absolute;
+    }
+    .ingresar{
+        position: relative;
+        padding-left: 70%;
+    }
+    button{
+        height: 25px;
+        margin:3px 0px;
+        display: inline-flex;
+        flex-wrap: wrap;
+        align-content: center;
     }
 }

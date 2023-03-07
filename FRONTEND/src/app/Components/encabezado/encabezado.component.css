@@ -8,8 +8,12 @@ app-logos, app-banner{
     padding: 0px;
     margin-bottom: 0px;
 }
-div{
-text-align: center;
+.acerca_de_mi{
+    width: 100%;
+}
+app-datos-personales{
+    width: 65%;
+    
 }
 p{
 margin-right: 10px;
@@ -23,7 +27,14 @@ margin-bottom: 0px;
 #dropdownMenuButton1{
 margin: auto;
 box-shadow: 10px 10px 30px black;
-
+border-radius: 20px;
+}
+.dropdown-menu{
+    background: rgb(75, 140, 253);
+    box-shadow: 0px 0px 20px -5px black;
+}
+.dropdown-item:hover{
+    background: rgba(37, 117, 252, 1);
 }
 /*etiqueta nombre*/
 #nombre{
@@ -33,14 +44,21 @@ margin-top: 30%;
 /*estilo de la foto de perfil*/
 @media(min-width:576px){
 
-#perfil{
-    position: absolute;
-    width: 15%;
-    border-radius: 100%;
-    box-shadow: 10px 10px 30px black;
-    left: 2%;
-    top: 230px;
-}
+    #perfil{
+        position: absolute;
+        width: 15%;
+        border-radius: 100%;
+        box-shadow: 10px 10px 30px black;
+        left: 2%;
+        top: 230px;
+    }
+    app-datos-personales{
+        width: 60%;
+        margin-top: 20px;
+    }
+    .row{
+        width: 100%;
+    }
 }
 @media(max-width:575px){
     #perfil{
@@ -53,5 +71,17 @@ margin-top: 30%;
     }
     .dropdown{
         margin-bottom: 20px;
+    }
+    app-datos-personales{
+        width: 60%;
+    }
+    .row{
+        width: 100%;
+        justify-content: center;
+    }
+}
+@media(max-width: 320px){
+    #perfil{
+
     }
 }
