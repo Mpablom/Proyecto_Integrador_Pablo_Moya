@@ -36,6 +36,35 @@ border-radius: 20px;
 .dropdown-item:hover{
     background: rgba(37, 117, 252, 1);
 }
+.img-fluid-container{
+    width: 25%;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+#perfil{
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    animation-name:morph;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-delay: 0s;
+}
+@keyframes morph{
+    0%{
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    }
+    25%{
+        border-radius: 30% 60% 70% 40% / 50% 60% 30% 40%;
+    }
+    50%{
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    }
+    75%{
+        border-radius: 30% 60% 70% 40% / 50% 60% 30% 40%;
+    }
+    100%{
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    }
+}
 /*etiqueta nombre*/
 #nombre{
 font-weight: bold;
@@ -78,10 +107,5 @@ margin-top: 30%;
     .row{
         width: 100%;
         justify-content: center;
-    }
-}
-@media(max-width: 320px){
-    #perfil{
-
     }
 }
