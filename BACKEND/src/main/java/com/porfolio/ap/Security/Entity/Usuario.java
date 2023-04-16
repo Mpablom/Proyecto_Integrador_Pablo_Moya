@@ -1,72 +1,62 @@
 package com.porfolio.ap.Security.Entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.FetchType;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.JoinTable;
-import jakarta.persistence.ManyToMany;
-import jakarta.validation.constraints.NotNull;
+import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 import java.util.HashSet;
 import java.util.Set;
 
 @Entity
 public class Usuario {
-    @Id
+     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Long id;
     @NotNull
-    private String nombre;
+    private String name;
     @NotNull
     @Column(unique = true)
-    private String nobreUsuario;
+    private String userName;
     @NotNull
     private String email;
     @NotNull
     private String password;
-    @ManyToMany(fetch = FetchType.EAGER)
-    @JoinTable(name = "usuario_rol", joinColumns = @JoinColumn(name = "usuario_id"), inverseJoinColumns = @JoinColumn(name = "rol_id"))
-    private Set<Rol> roles = new HashSet<>();
-    
-    //Constructores
 
+    @NotNull
+    @ManyToMany(fetch = FetchType.EAGER)
+    @JoinTable(name = "usuario_rol", joinColumns = @JoinColumn(name = "usuario_id"),
+            inverseJoinColumns = @JoinColumn(name = "rol_id"))
+    private Set<Rol> roles = new HashSet<>();
     public Usuario() {
     }
 
-    public Usuario(String nombre, String nobreUsuario, String email, String password) {
-        this.nombre = nombre;
-        this.nobreUsuario = nobreUsuario;
+    public Usuario(@NotNull String name, @NotNull String userName, @NotNull String email, @NotNull String password) {
+        this.name = name;
+        this.userName = userName;
         this.email = email;
         this.password = password;
     }
-    
-    //Getter & Setter
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
-    public String getNombre() {
-        return nombre;
+    public String getName() {
+        return name;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getNobreUsuario() {
-        return nobreUsuario;
+    public String getUserName() {
+        return userName;
     }
 
-    public void setNobreUsuario(String nobreUsuario) {
-        this.nobreUsuario = nobreUsuario;
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 
     public String getEmail() {

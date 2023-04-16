@@ -1,8 +1,8 @@
 package com.porfolio.ap.Security.Service;
 
 import com.porfolio.ap.Security.Entity.Usuario;
-import com.porfolio.ap.Security.Repository.IUsuarioRepository;
-import jakarta.transaction.Transactional;
+import com.porfolio.ap.Security.Repository.UsuarioRepository;
+import javax.transaction.Transactional;
 import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -10,22 +10,23 @@ import org.springframework.stereotype.Service;
 @Service
 @Transactional
 public class UsuarioService {
+
     @Autowired
-    IUsuarioRepository iusuarioRepository;
-    
-    public Optional<Usuario> getByNombreUsuario(String nombreUsuario){
-        return iusuarioRepository.finByNombreUsuario(nombreUsuario);
+    UsuarioRepository usuarioRepository;
+
+    public Optional<Usuario> getByUserName(String userName){
+        return usuarioRepository.findByUserName(userName);
+
     }
-    
-    public boolean  existsByNombreUsuario(String nombreUsuario){
-        return iusuarioRepository.existByNombreUsuario(nombreUsuario);
+    public boolean existsByUserName(String userName){
+
+        return usuarioRepository.existsByUserName(userName);
     }
-    
-    public boolean  existsByEmail(String email){
-        return iusuarioRepository.existByEmail(email);
+    public boolean existsByEmail(String email){
+
+        return usuarioRepository.existsByEmail(email);
     }
-    
     public void save(Usuario usuario){
-        iusuarioRepository.save(usuario);
+        usuarioRepository.save(usuario);
     }
 }

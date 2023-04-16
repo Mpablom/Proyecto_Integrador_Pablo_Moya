@@ -1,49 +1,38 @@
 package com.porfolio.ap.Security.Entity;
 
-import com.porfolio.ap.Security.Enums.RolNombre;
-import jakarta.persistence.Entity;
-import jakarta.persistence.EnumType;
-import jakarta.persistence.Enumerated;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.validation.constraints.NotNull;
+import com.porfolio.ap.Security.Enums.RolName;
+import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 
 @Entity
 public class Rol {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Long id;
     @NotNull
     @Enumerated(EnumType.STRING)
-    private RolNombre rolNombre;
-    
-    //Constructor
+    private RolName rolName;
 
     public Rol() {
     }
 
-    public Rol(RolNombre rolNombre) {
-        this.rolNombre = rolNombre;
+    public Rol(@NotNull RolName rolName){
+    this.rolName = rolName;
     }
-
-    //Getter & Setter
-
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+
+    public void setId(Long id) {
         this.id = id;
     }
 
-    public RolNombre getRolNombre() {
-        return rolNombre;
+    public RolName getRolName() {
+        return rolName;
     }
 
-    public void setRolNombre(RolNombre rolNombre) {
-        this.rolNombre = rolNombre;
+    public void setRolName(RolName rolName) {
+        this.rolName = rolName;
     }
-    
-    
 }
