@@ -1,24 +1,43 @@
 <!--========================================== FORMACION ACADEMICA =============================================-->
 <div class="row">
-    <div class="contenido">
-        <h2 id="Formacion-Academica">Formación Académica</h2>
-        <div class="row" id="formaciones">
-            <div class="text-center col-sm-3 col-md-3 col-lg-3"  id="formacion">
-                <a href="https://www.escuelatecnicaboero.com/"><img src="../../../assets/Boero.png" id="logo-estudios"></a>
-                <p>Técnico Electrónico <b> Escuela Ingeniero Rogelio Boero</b></p>
-            </div>
-            <div class="text-center col-sm-3 col-md-3 col-lg-3" id="formacion">
-                <a href="https://argentinaprograma.inti.gob.ar/"><img src="../../../assets/argentina_programa.png" id="logo-estudios"></a>
-                <p>Curso de capacitación Argentina Programa </p>
-            </div>
-            <div class="text-center col-sm-3 col-md-3 col-lg-3" id="formacion">
-                <a href="https://app.aluracursos.com/loginForm?urlAfterLogin=https://app.aluracursos.com/formacion-bienvenida-one"><img src="../../../assets/oracle.jpg" id="logo-estudios"></a>
-                <p>Curso de Programación Oracle next education </p>
-            </div>
-            <div class="text-center col-sm-3 col-md-3 col-lg-3" id="formacion">
-                <a href="https://www.teclab.edu.ar/"><img src="../../../assets/Teclab.jpg" id="logo-estudios"></a>
-                <p>Tecnicatura superior en Programación en Teclab </p>
-            </div>
-        </div>
+  <div class="contenido">
+    <h2 id="Educacion">Educación</h2>
+    <div class="col-lg 2">
+      <button
+        type="button"
+        class="btn bg-dark rounded-5 bg-gradient"
+        routerLink="/nuevaedu"
+        *ngIf="isLogged"
+      >
+        Agregar Educación
+      </button>
     </div>
+    <div class="col-lg-1 col-md-1 col-sm-1"></div>
+    <div class="col-lg-11 col-md-11 col-sm-11 w-50 m-auto">
+      <table class="table">
+        <tbody>
+          <tr *ngFor="let Educacion of educacion">
+            <td>{{ Educacion.nombreE }}</td>
+            <td>{{ Educacion.descripcionE }}</td>
+            <td *ngIf="isLogged">
+              <button
+                class="btn bg-success h-100 rounded-5 bg-gradient"
+                routerLink="/editedu/{{ Educacion.id }}"
+              >
+              EDITAR<i class="bi bi-pen-fill"></i>
+              </button>
+            </td>
+            <td *ngIf="isLogged">
+              <button
+                class="btn bg-danger h-100 rounded-5 bg-gradient"
+                (click)="delete(Educacion.id)"
+              >
+              BORRAR<i class="bi bi-x-octagon"></i>
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
 </div>

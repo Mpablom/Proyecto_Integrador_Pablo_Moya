@@ -5,7 +5,7 @@
     <div class="col-lg 2">
       <button
         type="button"
-        class="btn btn-dark"
+        class="btn bg-dark rounded-5 bg-gradient"
         routerLink="/newexp"
         *ngIf="isLogged"
       >
@@ -21,7 +21,7 @@
             <td>{{ Experiencia.descripcionE }}</td>
             <td *ngIf="isLogged">
               <button
-                class="btn btn-light"
+                class="btn bg-success bg-gradient rounded-5 h-100"
                 routerLink="/editexp/{{ Experiencia.id }}"
               >
                 <i class="bi bi-pen-fill"></i>EDITAR
@@ -29,7 +29,7 @@
             </td>
             <td *ngIf="isLogged">
               <button
-                class="btn btn-light"
+                class="btn bg-danger h-100 rounded-5 bg-gradient"
                 (click)="delete(Experiencia.id)"
               >
                 <i class="bi bi-x-octagon"></i>BORRAR
