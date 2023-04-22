@@ -41,11 +41,11 @@ p {
 ul{
   list-style-type: none;
   margin-left: 20px;
-  padding: 10;
+  padding: 10px;
 }
 ol{
   list-style-type: none;
-  margin-left: 20;
+  margin-left: 20px;
   padding:10px 0px;
 }
 .row{

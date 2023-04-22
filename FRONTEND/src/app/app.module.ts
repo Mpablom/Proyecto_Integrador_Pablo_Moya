@@ -20,6 +20,10 @@ import { NgCircleProgressModule } from 'ng-circle-progress';
 import { NgxBootstrapIconsModule } from 'ngx-bootstrap-icons';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MdbCheckboxModule } from 'mdb-angular-ui-kit/checkbox';
+import { FormsModule }   from '@angular/forms';
+import { interceptorProvider } from './service/interceptor-service';
+import { NewExperienciaComponent } from './Components/experiencia-laboral/new-experiencia.component';
+import { EditExperienciaComponent } from './Components/experiencia-laboral/edit-experiencia.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +39,9 @@ import { MdbCheckboxModule } from 'mdb-angular-ui-kit/checkbox';
     LogosComponent,
     ProyectosComponent,
     HomeComponent,
-    LoginComponent
+    LoginComponent,
+    NewExperienciaComponent,
+    EditExperienciaComponent
   ],
   imports: [
     BrowserModule,
@@ -44,8 +50,12 @@ import { MdbCheckboxModule } from 'mdb-angular-ui-kit/checkbox';
     NgCircleProgressModule.forRoot({}),
     BrowserAnimationsModule,
     MdbCheckboxModule,
+    FormsModule
+
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [
+    interceptorProvider
+  ],
+  bootstrap: [AppComponent],
 })
 export class AppModule { }
