@@ -8,7 +8,7 @@ import { persona } from '../model/persona.model';
 })
 
 export class PersonaService {
-  URL = 'http://proyectointegradorbackend-production.up.railway.app/persona/';
+  URL = 'https://proyectointegradorbackend-production.up.railway.app/persona/';
   constructor(private http: HttpClient) { }
   public getPersona(): Observable<persona>{
     return this.http.get<persona>(this.URL+'traer/perfil');

@@ -10,7 +10,7 @@ import { JwtDto } from '../model/jwt-dto';
 })
 export class AuthService {
 
-  authURL = 'http://proyectointegradorbackend-production.up.railway.app/auth/';
+  authURL = 'https://proyectointegradorbackend-production.up.railway.app/auth/';
 
   constructor(private httpClient: HttpClient) { }
 

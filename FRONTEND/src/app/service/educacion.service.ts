@@ -7,7 +7,7 @@ import { Educacion } from '../model/educacion';
   providedIn: 'root'
 })
 export class EducacionService {
-  URL = 'http://proyectointegradorbackend-production.up.railway.appeducacion/';
+  URL = 'https://proyectointegradorbackend-production.up.railway.appeducacion/';
 
   constructor(private httpClient: HttpClient) { }
 
