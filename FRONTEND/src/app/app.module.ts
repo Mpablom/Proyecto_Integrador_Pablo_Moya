@@ -29,6 +29,8 @@ import { EditeducacionComponent } from './Components/formacion-academica/editedu
 import { initializeApp } from 'firebase/app';
 import { provideFirebaseApp, getApp } from '@angular/fire/app';
 import { environment } from '../environments/environment.prod';
+import { EditSkillComponent } from './Components/hardysoft/edit-skill.component';
+import { NewSkillComponent } from './Components/hardysoft/new-skill.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +50,9 @@ import { environment } from '../environments/environment.prod';
     NewExperienciaComponent,
     EditExperienciaComponent,
     NeweducacionComponent,
-    EditeducacionComponent
+    EditeducacionComponent,
+    EditSkillComponent,
+    NewSkillComponent
   ],
   imports: [
     BrowserModule,
