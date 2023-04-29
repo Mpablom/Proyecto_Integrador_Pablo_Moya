@@ -9,9 +9,9 @@ import { environment } from '../../environments/environment.prod'
 })
 
 export class PersonaService {
-  URL = environment.apiURL+ `persona/`;
+  URL = `${environment.apiURL}persona/`;
   constructor(private https: HttpClient) { }
   public getPersona(): Observable<persona>{
-    return this.https.get<persona>(this.URL+ `traer/perfil`);
+    return this.https.get<persona>(`${this.URL}traer/perfil`);
   }
 }
