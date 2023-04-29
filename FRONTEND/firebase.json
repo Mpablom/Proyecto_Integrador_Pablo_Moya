@@ -5,6 +5,15 @@
       "firebase.json",
       "**/.*",
       "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "/proyectointegradorbackend-production.up.railway.app/**",
+        "destination": "https://proyectointegradorbackend-production.up.railway.app$1",
+        "headers": {
+          "Host": "proyectointegradorbackend-production.up.railway.app"
+        }
+      }
     ]
   }
 }
