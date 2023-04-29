@@ -4,13 +4,15 @@ import { Observable } from 'rxjs';
 import { NuevoUsuario } from '../model/nuevo-usuario';
 import { LoginUsuario } from '../model/login-usuario';
 import { JwtDto } from '../model/jwt-dto';
+import { environment } from '../../environments/environment.prod'
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
 
-  authURL = 'https://proyectointegradorbackend-production.up.railway.app/auth/';
+  authURL = environment.apiURL + `auth/`;
 
   constructor(private httpClient: HttpClient) { }
 

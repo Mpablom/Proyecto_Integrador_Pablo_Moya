@@ -26,6 +26,9 @@ import { NewExperienciaComponent } from './Components/experiencia-laboral/new-ex
 import { EditExperienciaComponent } from './Components/experiencia-laboral/edit-experiencia.component';
 import { NeweducacionComponent } from './Components/formacion-academica/neweducacion.component';
 import { EditeducacionComponent } from './Components/formacion-academica/editeducacion.component';
+import { initializeApp } from 'firebase/app';
+import { provideFirebaseApp, getApp } from '@angular/fire/app';
+import { environment } from '../environments/environment.prod';
 
 @NgModule({
   declarations: [
@@ -54,11 +57,12 @@ import { EditeducacionComponent } from './Components/formacion-academica/editedu
     NgCircleProgressModule.forRoot({}),
     BrowserAnimationsModule,
     MdbCheckboxModule,
-    FormsModule
-
+    FormsModule,
+    provideFirebaseApp(() => initializeApp(environment.firebaseConfig)),
   ],
   providers: [
-    interceptorProvider
+    interceptorProvider,
+    { provide: 'firebase', useFactory: () => getApp() },
   ],
   bootstrap: [AppComponent],
 })
