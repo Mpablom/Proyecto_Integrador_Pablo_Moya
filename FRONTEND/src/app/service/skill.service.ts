@@ -1,21 +1,21 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-//import { environment } from 'src/environments/environment';
 import { Skill } from '../model/skill';
 import { environment } from 'src/environments/environment.prod';
+//import { environment } from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class SkillService {
-  URL = environment.apiURL +`explab/`;
-  //URL = environment.URL +'skill/';
+  URL = environment.apiURL + 'skill/';
+  //URL = environment.URL + 'skill/';
 
   constructor(private httpClient : HttpClient) { }
 
   public lista() : Observable<Skill[]>{
-    return this.httpClient.get<Skill[]>(this.URL +'lista');
+    return this.httpClient.get<Skill[]>(this.URL +`lista`);
   }
 
   public details(id: number): Observable<Skill>{

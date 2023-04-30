@@ -31,6 +31,8 @@ import { provideFirebaseApp, getApp } from '@angular/fire/app';
 import { environment } from '../environments/environment.prod';
 import { EditSkillComponent } from './Components/hardysoft/edit-skill.component';
 import { NewSkillComponent } from './Components/hardysoft/new-skill.component';
+import { EditAcercaDeComponent } from './Components/encabezado/edit-acerca-de.component';
+import { provideStorage,getStorage } from '@angular/fire/storage';
 
 @NgModule({
   declarations: [
@@ -52,7 +54,8 @@ import { NewSkillComponent } from './Components/hardysoft/new-skill.component';
     NeweducacionComponent,
     EditeducacionComponent,
     EditSkillComponent,
-    NewSkillComponent
+    NewSkillComponent,
+    EditAcercaDeComponent
   ],
   imports: [
     BrowserModule,
@@ -63,6 +66,7 @@ import { NewSkillComponent } from './Components/hardysoft/new-skill.component';
     MdbCheckboxModule,
     FormsModule,
     provideFirebaseApp(() => initializeApp(environment.firebaseConfig)),
+    provideStorage(() => getStorage()),
   ],
   providers: [
     interceptorProvider,

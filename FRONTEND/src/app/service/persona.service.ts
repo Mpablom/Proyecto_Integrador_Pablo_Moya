@@ -13,8 +13,25 @@ export class PersonaService {
   URL = `${environment.apiURL}persona/`;
   //URL = `${environment.URL}persona/`;
 
-  constructor(private https: HttpClient) { }
-  public getPersona(): Observable<persona>{
-    return this.https.get<persona>(`${this.URL}traer/perfil`);
+  constructor(private httpClient: HttpClient) { }
+
+  public lista(): Observable<persona>{
+    return this.httpClient.get<persona>(this.URL + 'lista');
   }
+
+  public details(id: number): Observable<persona>{
+    return this.httpClient.get<persona>(this.URL + `detail/${id}`);
+  }
+
+  /*public save(educacion: Educacion): Observable<any>{
+    return this.httpClient.post<any>(this.URL + 'create', educacion);
+  }*/
+
+  public update(id:number, Persona:persona): Observable<any>{
+    return this.httpClient.put<any>(this.URL + `update/${id}`, Persona);
+  }
+
+  /*public delete(id:number):Observable<any>{
+    return this.httpClient.delete<any>(this.URL + `delete/${id}`);
+  }*/
 }

@@ -4,8 +4,16 @@
     <app-banner></app-banner>
 </div>
 <div class="row">
+  <button
+        type="button"
+        class="btn bg-dark rounded-5 bg-gradient"
+        routerLink="/editaracercade/1"
+        *ngIf="isLogged"
+      >
+        Editar Persona
+      </button>
     <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2 img-fluid-container">
-        <img id="perfil" src="../../../assets/Yo2.jpg" alt="foto1" class="img-fluid">
+        <img id="perfil" src={{persona.img}} alt="foto1" class="img-fluid">
     </div>
     <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
         <p id="nombre">{{persona.nombre}} {{persona.apellido}}</p>
@@ -15,9 +23,7 @@
     <div class="col-xs-12 col-sm-8 col-md-8 col-ld-8 acerca_de_mi">
         <span>
         <h1>Acerca de mí</h1>
-        <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis cum voluptatem deleniti ad quae sapiente impedit temporibus ipsa aspernatur ducimus ipsum, consectetur odit iure consequatur? Iure ipsum obcaecati aliquid sapiente.
-        </p>
+        <p>{{persona.descripcion}}</p>
         </span>
     </div>
 </div>
