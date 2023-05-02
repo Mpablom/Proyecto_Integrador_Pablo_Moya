@@ -23,16 +23,14 @@
               <button
                 class="btn bg-success h-100 rounded-5 bg-gradient"
                 routerLink="/editedu/{{ Educacion.id }}"
-              >
-              EDITAR<i class="bi bi-pen-fill"></i>
+              ><i class="bi bi-pen-fill"></i>
               </button>
             </td>
             <td *ngIf="isLogged">
               <button
                 class="btn bg-danger h-100 rounded-5 bg-gradient"
                 (click)="delete(Educacion.id)"
-              >
-              BORRAR<i class="bi bi-x-octagon"></i>
+              ><i class="bi bi-x-octagon"></i>
               </button>
             </td>
           </tr>
