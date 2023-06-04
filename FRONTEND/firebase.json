@@ -8,10 +8,10 @@
     ],
     "rewrites": [
       {
-        "source": "/backapp-nha0.onrender.com/**",
-        "destination": "'https://backapp-nha0.onrender.com/'",
+        "source": "/proyectointegradorbackend-production.up.railway.app/**",
+        "destination": "https://proyectointegradorbackend-production.up.railway.app$1",
         "headers": {
-          "Host": "backapp-nha0.onrender.com"
+          "Host": "proyectointegradorbackend-production.up.railway.app"
         }
       }
     ]
